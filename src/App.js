@@ -8,11 +8,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ContextProvider from "./Components/Context/GlobalContext";
 const App = () => {
   return (
-    <Router>
+    <Router basename="/movie-app">
       <ContextProvider>
         <Header />
         <Routes>
-          <Route path="/" element={<WatchList />} />
+          <Route path="/movie-app" element={<WatchList />} />
           <Route path="/watched" element={<Watched />} />
           <Route path="/add" element={<Add />} />
         </Routes>
